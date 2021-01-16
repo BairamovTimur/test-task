@@ -1,25 +1,67 @@
-    .table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: center;
-    }
+.table {
+	width: 100%;
+	border: none;
+  margin-bottom: 20px;
+  table-layout:fixed; width:450px;
+}
 
-    .table thead {
-      font-size: small;
-      text-align: center;
-    }
+table td {
+	overflow:hidden;
+}
 
-    .table tbody td,
-    .table tbody th {
-      border: 1px groove #e1d188;
-    }
+table td:nth-of-type(1) {
+	width:40px;
+}
 
-    .table tbody tr:nth-of-type(1) th {
-      background: #fff5d7;
-    }
+table td:nth-of-type(2) {
+	width:100px;
+}
 
-    .table a[href^="#all"],
-    .table a[href="#close"] {
-      text-decoration: none;
-      border-bottom: 1px dashed;
-    }
+table td:nth-of-type(3) {
+	width: 200px;
+}
+
+table td:nth-of-type(4) {
+	width:100px;
+}
+
+.table thead th {
+	font-weight: bold;
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+	background: #d8d8d8;
+	font-size: 14px;
+}
+
+.table thead tr th:first-child {
+	border-radius: 8px 0 0 8px;
+}
+
+.table thead tr th:last-child {
+	border-radius: 0 8px 8px 0;
+}
+
+.table tbody td {
+	text-align: left;
+	border: none;
+	padding: 10px 15px;
+	font-size: 14px;
+	vertical-align: top;
+}
+
+.table tbody tr:nth-child(even){
+	background: #f3f3f3;
+}
+
+.table tbody tr td:first-child {
+	border-radius: 8px 0 0 8px;
+}
+
+.table tbody tr td:last-child {
+	border-radius: 0 8px 8px 0;
+}
+
+.del {
+  text-decoration: line-through;
+}

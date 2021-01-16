@@ -1,5 +1,5 @@
 import initView from './watchers';
-import getData from './data';
+import fileData from './default.json';
 
 const getDataTree = (data) => {
   const iter = (currentData, parent = undefined) => {
@@ -12,8 +12,7 @@ const getDataTree = (data) => {
 };
 
 export default () => {
-  const data = getData();
-  const dataTree = getDataTree(data);
+  const dataTree = getDataTree(fileData);
 
   const state = {
     viewMode: 'all',

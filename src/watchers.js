@@ -12,7 +12,7 @@ const initView = (state, tableElement) => {
     } = dataRow;
     const rowElement = document.createElement('tr');
     rowElement.id = id;
-    rowElement.classList = isActive ? '' : 'inactive';
+    rowElement.classList = isActive ? '' : 'del';
 
     if (state.viewMode === 'onlyActive' && !isActive) {
       return;
