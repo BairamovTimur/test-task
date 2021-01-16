@@ -1,0 +1,25 @@
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    .table thead {
+      font-size: small;
+      text-align: center;
+    }
+
+    .table tbody td,
+    .table tbody th {
+      border: 1px groove #e1d188;
+    }
+
+    .table tbody tr:nth-of-type(1) th {
+      background: #fff5d7;
+    }
+
+    .table a[href^="#all"],
+    .table a[href="#close"] {
+      text-decoration: none;
+      border-bottom: 1px dashed;
+    }
