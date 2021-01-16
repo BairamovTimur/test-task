@@ -1,3 +1,4 @@
+/* eslint-disable functional/no-let */
 import initView from './watchers';
 import fileData from './default.json';
 

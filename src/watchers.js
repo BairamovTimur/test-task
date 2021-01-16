@@ -1,5 +1,7 @@
 const initView = (state, tableElement) => {
+  const addedFragment = new DocumentFragment();
   tableElement.innerHTML = '';
+
   const renderTableRow = (dataRow) => {
     const {
       isActive,
@@ -42,7 +44,7 @@ const initView = (state, tableElement) => {
     balanceCell.textContent = balance;
 
     rowElement.append(deepCell, nameCell, emailCell, balanceCell);
-    tableElement.append(rowElement);
+    addedFragment.append(rowElement);
 
     if (showChildren) {
       children.forEach(renderTableRow);
@@ -51,6 +53,7 @@ const initView = (state, tableElement) => {
 
   const { dataTree } = state;
   dataTree.forEach(renderTableRow);
+  tableElement.append(addedFragment);
 };
 
 export default initView;
