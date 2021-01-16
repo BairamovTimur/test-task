@@ -1,29 +1,18 @@
 {
-  "name": "frontend-project-lvl3",
+  "name": "tesk-task",
   "version": "1.0.0",
-  "description": "RSS aggregator",
+  "description": "Test task for the interview",
   "main": "./bin/index.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "bin": {
-    "gendiff": "bin/index.js"
-  },
-  "jest": {
-    "setupFilesAfterEnv": [
-      "./jest.setup.js"
-    ]
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BairamovTimur/frontend-project-lvl3.git"
+    "url": "git+https://github.com/BairamovTimur/test-task.git"
   },
   "author": "BairamovTM",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BairamovTimur/frontend-project-lvl3/issues"
+    "url": "https://github.com/BairamovTimur/test-task/issues"
   },
-  "homepage": "https://github.com/BairamovTimur/frontend-project-lvl3#readme",
+  "homepage": "https://github.com/BairamovTimur/test-task#readme",
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.10.3",
