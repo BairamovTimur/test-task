@@ -23,7 +23,8 @@ export default () => {
   const checkboxElement = document.getElementById('mainCheckbox');
 
   checkboxElement.addEventListener('click', () => {
-    state.viewMode = state.viewMode === 'all' ? 'onlyActive' : 'all';
+    const { viewMode } = state;
+    state.viewMode = viewMode === 'all' ? 'onlyActive' : 'all';
     initView(state, tableElement);
   });
 
