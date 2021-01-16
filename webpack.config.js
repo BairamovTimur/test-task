@@ -20,6 +20,15 @@ module.exports = {
         },
         {
           loader: 'css-loader',
+        }, {
+          loader: 'postcss-loader',
+          options: {
+            plugins() {
+              return [];
+            },
+          },
+        }, {
+          loader: 'sass-loader',
         }],
       },
     ],
@@ -34,5 +43,4 @@ module.exports = {
     compress: true,
     port: 9000,
   },
-  watch: true,
 };
