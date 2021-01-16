@@ -1,19 +1,30 @@
-/* eslint-disable functional/no-let */
 import initView from './watchers';
 import fileData from './default.json';
 
 const getDataTree = (data) => {
-  const iter = (currentData, parent = undefined) => {
-    const parentId = parent === undefined ? 0 : parent.id;
-    return currentData.filter((element) => element.parentId === parentId)
-      .map((elem) => ({ ...elem, showChildren: false, children: iter(currentData, elem) }));
-  };
+  const list = [...data];
+  const map = {};
+  const roots = [];
 
-  return iter(data);
+  list.forEach((element, index) => {
+    map[element.id] = index;
+    element.children = [];
+  });
+
+  list.forEach((element) => {
+    if (element.parentId !== 0) {
+      list[map[element.parentId]].children.push(element);
+    } else {
+      roots.push(element);
+    }
+  });
+
+  return roots;
 };
 
 export default () => {
-  const dataTree = getDataTree(fileData);
+  const data = fileData.map((element) => ({ ...element, showChildren: true }));
+  const dataTree = getDataTree(data);
 
   const state = {
     viewMode: 'all',
