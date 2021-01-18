@@ -23,7 +23,7 @@ const getDataTree = (data) => {
 };
 
 export default () => {
-  const data = fileData.map((element) => ({ ...element, showChildren: true }));
+  const data = fileData.map((element) => ({ ...element, showChildren: false }));
   const dataTree = getDataTree(data);
 
   const state = {
